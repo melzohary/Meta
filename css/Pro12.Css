@@ -1,0 +1,468 @@
+:root{
+    --color1:#7453fc !important;
+}
+.text-color{
+color: #7453fc !important;
+}
+.text-color2{
+color: #00ccff !important;
+}
+.bg-color{
+    background-color:#282b2f;
+}
+body{
+overflow-x: hidden;
+}
+
+.home{
+    background-image: url(../Pro12-img/banner-bg\ \(1\).jpg);
+    background-size: cover;
+    height: 130vh;
+    position:relative;
+}
+nav{
+    background-color: #fff;
+    border-radius: 50px;
+    position: absolute;
+    top: 30px;
+    overflow:hidden;
+    z-index: 1;
+}
+
+@media screen and (max-width:1115px) {
+    nav {
+            background-color: #fff;
+            border-radius: 10px;
+            position: absolute;
+            top: 30px;
+            overflow: hidden;
+            z-index: 1;
+        }
+}
+
+.navbar-nav .nav-item{
+ margin-right: 30px;
+ transition: all .3s;
+ margin-top: 5px;
+}
+.navbar-nav .nav-item .active{
+ background-color: var(--color1);
+ color: #fff !important;
+ border-radius: 50px;
+}
+.navbar-nav .nav-item a:hover{
+ background-color: var(--color1);
+ border-radius: 50px;
+color: #fff !important;
+}
+.navbar-nav .nav-item a{
+font-weight:500;
+padding: 5px;
+transition: all .3s;
+border-radius: 50px;
+color: #000 !important;
+}
+.navbar-brand{
+margin-left: 25px !important;
+}
+.home-content{
+    position: absolute;
+    top: 25%;
+}
+.home-text h4{
+    font-size: 20px;
+    font-weight: bold;
+}
+.home-text h1{
+    font-size: 50px;
+    font-weight: bold;
+}
+.home-text p{
+    letter-spacing: 1px;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+/* Fils out  */
+
+.button {
+    position: relative;
+    overflow: hidden;
+    height: 3rem;
+    padding: 0 2rem;
+    border-radius: 1.5rem;
+    background: #3d3a4e00;
+    background-size: 400%;
+    color: #fff;
+    border: solid 1px;
+    border-color: var(--color1);
+}
+
+.button:hover::before {
+    transform: scaleX(1);
+}
+
+.button-content {
+    position: relative;
+    z-index: 1;
+}
+
+.button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    width: 100%;
+    height: inherit;
+    border-radius: inherit;
+    background: linear-gradient(82.3deg,
+            rgba(150, 93, 233, 1) 10.8%,
+            rgba(99, 88, 238, 1) 94.3%);
+    transition: all 0.475s;
+}
+
+@media screen and (max-width:992px) {
+    .home{
+height: 200vh;
+overflow: hidden;
+    }
+}
+
+
+/* About  */
+
+
+.about{
+background-image: url(../Pro12-img/dark-bg.jpg);
+background-size: cover;
+height: 100%;
+}
+
+.heading .line{
+width: 100px;
+height: 2px;
+background-color: var(--color1);
+margin: auto;
+}
+.heading h3{
+color: #fff;
+font-size: 30px;
+font-weight: bold;
+}
+
+/* icon Hover  */
+
+.about-icon{
+background-color: #282b2f;
+padding: 25px;
+margin-bottom: 10px;
+border-radius: 15px;
+border: 1px solid #ffffff4b;
+transition: all .3s;
+overflow: hidden;
+}
+
+
+.about-icon:hover {
+    animation: sh0 0.5s ease-in-out both;
+}
+
+@keyframes sh0 {
+    0% {
+        transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+
+    25% {
+        transform: rotate(7deg) translate3d(0, 0, 0);
+    }
+
+    50% {
+        transform: rotate(-7deg) translate3d(0, 0, 0);
+    }
+
+    75% {
+        transform: rotate(1deg) translate3d(0, 0, 0);
+    }
+
+    100% {
+        transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+}
+
+.about-icon:hover span {
+    animation: storm 0.7s ease-in-out both;
+    animation-delay: 0.06s;
+}
+
+.about-icon::before,
+.about-icon::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #fff;
+    opacity: 0;
+    transition: transform 0.15s cubic-bezier(0.02, 0.01, 0.47, 1), opacity 0.15s cubic-bezier(0.02, 0.01, 0.47, 1);
+    z-index: -1;
+    transform: translate(100%, -25%) translate3d(0, 0, 0);
+}
+
+.about-icon:hover::before,
+.about-icon:hover::after {
+    opacity: 0.15;
+    transition: transform 0.2s cubic-bezier(0.02, 0.01, 0.47, 1), opacity 0.2s cubic-bezier(0.02, 0.01, 0.47, 1);
+}
+
+.about-icon:hover::before {
+    transform: translate3d(50%, 0, 0) scale(0.9);
+}
+
+.about-icon:hover::after {
+    transform: translate(50%, 0) scale(1.1);
+}
+
+/* icon Hover  */
+
+
+.about-icon .icon img{
+padding: 15px;
+background-color: #fff;
+border-radius: 50%;
+}
+.about-icon .icon h5{
+font-weight: bold;
+}
+
+/* About2  */
+
+.line2{
+    width: 250px;
+    height: 1px;
+    background-color: #ffffff46;
+}
+
+.card-text{
+    display: flex;
+    justify-content: space-between;
+}
+.card{
+border-radius: 15px;
+}
+.card img{
+border-radius: 15px;
+}
+
+
+.button2 {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 30px;
+    border: 0;
+    position: relative;
+    bottom: -30px;
+    overflow: hidden;
+    border-radius: 10rem;
+    transition: all 0.02s;
+    font-weight: bold;
+    color: rgb(37, 37, 37);
+    z-index: 0;
+    box-shadow: 0 0px 7px -5px rgba(0, 0, 0, 0.5);
+}
+
+.button2:hover {
+    background: rgb(193, 228, 248);
+    color: rgb(33, 0, 85);
+}
+
+.button2:active {
+    transform: scale(0.97);
+}
+
+.hoverEffect {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.hoverEffect div {
+    background: rgb(222, 0, 75);
+    background: linear-gradient(90deg, rgba(222, 0, 75, 1) 0%, rgba(191, 70, 255, 1) 49%, rgba(0, 212, 255, 1) 100%);
+    border-radius: 40rem;
+    width: 10rem;
+    height: 10rem;
+    transition: 0.4s;
+    filter: blur(20px);
+    animation: effect infinite 3s linear;
+    opacity: 0.5;
+}
+
+.button2:hover .hoverEffect div {
+    width: 8rem;
+    height: 8rem;
+}
+
+@keyframes effect {
+
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* Content  */
+
+
+.content{
+    background-image: url(../Pro12-img/main-bg.jpg);
+
+}
+
+.content .line{
+margin: 20px 0 !important;
+}
+
+.head{
+    justify-content: space-between;
+}
+
+.button3 {
+    height: 2.8em;
+    width: 9em;
+    background: #7453fc;
+    -webkit-animation: jello-horizontal 0.9s both;
+    animation: jello-horizontal 0.9s both;
+    border: 2px solid #ffffff46;
+    border-radius: 20px;
+    outline: none;
+    color: #ffffff;
+    font-size: 17px;
+}
+
+.button3:hover {
+    background: #fff;
+    color: #7453fc;
+    animation: squeeze3124 0.9s both;
+}
+
+@keyframes squeeze3124 {
+    0% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+
+    30% {
+        -webkit-transform: scale3d(1.25, 0.75, 1);
+        transform: scale3d(1.25, 0.75, 1);
+    }
+
+    40% {
+        -webkit-transform: scale3d(0.75, 1.25, 1);
+        transform: scale3d(0.75, 1.25, 1);
+    }
+
+    50% {
+        -webkit-transform: scale3d(1.15, 0.85, 1);
+        transform: scale3d(1.15, 0.85, 1);
+    }
+
+    65% {
+        -webkit-transform: scale3d(0.95, 1.05, 1);
+        transform: scale3d(0.95, 1.05, 1);
+    }
+
+    75% {
+        -webkit-transform: scale3d(1.05, 0.95, 1);
+        transform: scale3d(1.05, 0.95, 1);
+    }
+
+    100% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+.content .icon2 img{
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 50%;
+}
+.line-icon{
+    position: relative;
+}
+.line-icon::before{
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    background-color: #ffffff54;
+}
+@media screen and (max-width:992px) {
+    .icon2{
+        text-align:center;
+    }
+}
+@media screen and (max-width:600px) {
+    .content .head h3{
+      font-size: 20px !important;
+    }
+       
+}
+@media screen and (max-width:400px) {
+    .content .head h3{
+      font-size: 15px !important;
+    }
+       
+}
+
+
+
+/* Img  */
+
+
+.img{
+    background-image: url(../Pro12-img/dark-bg.jpg);
+}
+.img .line{
+    margin: 15px 0 !important;
+}
+.nav-img nav {
+    background-color: #ffffff00 !important;
+}
+.nav-img nav .nav-item a{
+    color: #fff !important;
+}
+.nav-img .head{
+    display: flex;
+}
+.img .card{
+    background-color: #282b2f !important;
+    display: flex;
+
+}
+
+.img .card-img img{
+border-radius: 50%;
+}
+
+.footer{
+    background-image: url(../Pro12-img/main-bg.jpg);
+    color: #fff !important;
+}
